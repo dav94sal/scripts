@@ -1,73 +1,79 @@
 #!/usr/bin/bash
 
-npm install --save "cookie-parser" "cors" "csurf" "dotenv" \
-                   "express" "express-async-errors" "helmet" \
-                   "jsonwebtoken" "morgan" "per-env" "sequelize@6" \
-                   "sequelize-cli@6" "pg" "react-router-dom"
+cp -a ~/scripts/javascript-backend-setup/backend backend/
 
-npm install --save-d 'sqlite3' 'dotenv-cli' 'nodemon'
+cd backend/
+npm install
 
+# npm install --save "cookie-parser" "cors" "csurf" "dotenv" "express" \
+#                    "express-validator" "express-async-errors" "helmet" \
+#                    "jsonwebtoken" "morgan" "per-env" "sequelize@6" \
+#                    "sequelize-cli@6" "pg" "react-router-dom"
 
-touch README.md
-cp ~/scripts/javascript-backend-setup/README.md README.md
-
-touch .env
-cp ~/scripts/javascript-backend-setup/.env.example .env
-
-touch .sequelizerc
-cp ~/scripts/javascript-backend-setup/.sequelizerc .sequelizerc
-
-touch .gitignore
-cp ~/scripts/javascript-backend-setup/.gitignore .gitignore
+# npm install --save-d 'sqlite3' 'dotenv-cli' 'nodemon'
 
 
-mkdir config
 
-cd config
+# touch README.md
+# cp ~/scripts/javascript-backend-setup/README.md README.md
 
-touch index.js
-cp ~/scripts/javascript-backend-setup/index.js index.js
+# touch .env
+# cp ~/scripts/javascript-backend-setup/.env.example .env
 
-cd ../
+# touch .sequelizerc
+# cp ~/scripts/javascript-backend-setup/.sequelizerc .sequelizerc
 
-
-npx sequelize init
-
-
-cd config
-
-touch database.js
-cp ~/scripts/javascript-backend-setup/database.js database.js
-
-cd ../
+# touch .gitignore
+# cp ~/scripts/javascript-backend-setup/.gitignore .gitignore
 
 
-npx dotenv sequelize db:migrate
+# mkdir config
+
+# cd config
+
+# touch index.js
+# cp ~/scripts/javascript-backend-setup/index.js index.js
+
+# cd ../
 
 
-touch app.js
-cp ~/scripts/javascript-backend-setup/app.js app.js
+# npx sequelize init
 
 
-mkdir routes
-cd routes
+# cd config
 
-touch index.js
-cp ~/scripts/javascript-backend-setup/routes.js index.js
+# touch database.js
+# cp ~/scripts/javascript-backend-setup/database.js database.js
 
-mkdir app
-cd app
-
-touch index.js
-
-cd ../..
+# cd ../
 
 
-mkdir bin
-cd bin
+# npx dotenv sequelize db:migrate
 
-touch www
-cp ~/scripts/javascript-backend-setup/www www
+
+# touch app.js
+# cp ~/scripts/javascript-backend-setup/app.js app.js
+
+
+# mkdir routes
+# cd routes
+
+# touch index.js
+# cp ~/scripts/javascript-backend-setup/routes.js index.js
+
+# mkdir app
+# cd app
+
+# touch index.js
+
+# cd ../..
+
+
+# mkdir bin
+# cd bin
+
+# touch www
+# cp ~/scripts/javascript-backend-setup/www www
 
 
 # echo "All required packages and dependencies installed successfully!"
